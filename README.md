@@ -21,4 +21,4 @@ Adobe Creative Cloud 2023 including Photoshop, Illustrator and InDesign, Figma, 
 Programming
 Strong – HTML5 / CSS3
 
-This is my first portfolio website on Github. Stay tuned. I will post my works soon. ;-)
+This is my first portfolio website on Github.
