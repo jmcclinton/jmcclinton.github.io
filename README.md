@@ -15,4 +15,4 @@ Interpersonal, verbal, written communication skills
 Adobe Creative Cloud 2023 including Photoshop, Illustrator and InDesign, Figma, Canva, MailChimp, WordPress, Microsoft Office, Google Suites
 
 [PROGRAMMING]
-Strong – HTML5 / CSS3, Bootscrap
+Strong – HTML5 / CSS3, Bootstrap
