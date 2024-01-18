@@ -1,5 +1,5 @@
 [JENNIFER MCCLINTON]
-Graphic Designer | UI/UX Designer
+Graphic Designer | Email Developer | UI/UX Designer
 
 jmcclinton8@gmail.com
 https://dribbble.com/jmcclinton8
