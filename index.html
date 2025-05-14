@@ -48,7 +48,9 @@
             transform: rotate(25deg);
         }
     }
+    
 </style>
+  
 </head>
 
 <body class="index-page">
@@ -161,6 +163,108 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .word {
+            position: absolute;
+            font-size: 2rem;
+            font-weight: bold;
+            opacity: 0.8;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const words = ["Loyal", "Dependable", "Adaptable", "Smart", "Curious", "Hardworking", "Creative", "Innovative", "Reliable", "Passionate"];
+        const colors = ["cyan", "black", "magenta", "yellow",];
+        const placedWords = [];
+        
+        function getNonOverlappingPosition() {
+            let x, y, overlapping;
+            const maxAttempts = 100;
+            let attempts = 0;
+            
+            do {
+                x = Math.random() * (window.innerWidth - 100);
+                y = Math.random() * (window.innerHeight - 50);
+                
+                overlapping = placedWords.some(word => {
+                    const dx = word.x - x;
+                    const dy = word.y - y;
+                    return Math.sqrt(dx * dx + dy * dy) < 100;
+                });
+                
+                attempts++;
+            } while (overlapping && attempts < maxAttempts);
+            
+            placedWords.push({ x, y });
+            return { x, y };
+        }
+        
+        function createWord(word) {
+            const span = document.createElement("span");
+            span.classList.add("word");
+            span.textContent = word;
+            document.body.appendChild(span);
+            
+            const position = getNonOverlappingPosition();
+            span.style.left = position.x + "px";
+            span.style.top = position.y + "px";
+            
+            animateWord(span);
+        }
+        
+        function animateWord(element) {
+            let x = parseFloat(element.style.left);
+            let y = parseFloat(element.style.top);
+            let speedX = (Math.random() - 0.5) * 2;
+            let speedY = (Math.random() - 0.5) * 2;
+            let slowed = false;
+            
+            function move() {
+                if (!slowed) {
+                    x += speedX;
+                    y += speedY;
+                }
+                
+                if (x <= 0 || x >= window.innerWidth - 100) speedX *= -1;
+                if (y <= 0 || y >= window.innerHeight - 50) speedY *= -1;
+                
+                element.style.left = x + "px";
+                element.style.top = y + "px";
+                requestAnimationFrame(move);
+            }
+            
+            element.addEventListener("mouseenter", () => {
+                slowed = true;
+                element.style.transform = "scale(1.2)";
+                element.style.color = colors[Math.floor(Math.random() * colors.length)];
+            });
+            
+            element.addEventListener("mouseleave", () => {
+                slowed = false;
+                element.style.transform = "scale(1)";
+                element.style.color = "black";
+            });
+            
+            move();
+        }
+        
+        words.forEach(createWord);
+    </script>
 
 </body>
 
