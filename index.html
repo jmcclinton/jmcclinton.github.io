@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Jennifer McClinton | Graphic & UI UX Design</title>/title> <meta content="" name="description">
+<title>Jennifer McClinton | Graphic & UI UX Design</title> 
+  <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <!--<link href="assets/img/portfolio/favicon.ico" rel="icon">-->
-  <!--<link href="assets/img/portfolio/hero_image.jpg" rel="office">-->
+  <link href="assets/img/portfolio/favicon.ico" rel="icon">
+  <link href="assets/img/portfolio/hero_image.jpg" rel="office">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -32,7 +34,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
 <body>
 
   <!-- ======= Header ======= -->
@@ -64,30 +65,87 @@
 
     </div>
 
-  </header><!-- End Header -->
-  <style>
-        body {
-            background-color: white;
-            color: black;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .word {
-            position: absolute;
-            font-size: 2rem;
-            font-weight: bold;
-            opacity: 0.8;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            white-space: nowrap;
-        }
-    </style>
+  </header>
+  <!-- End Header -->
   <!-- ======= Hero Section ======= -->
+  <script>
+        const words = ["Loyal", "Dependable", "Adaptable", "Smart", "Curious", "Hardworking", "Creative", "Innovative", "Reliable", "Passionate"];
+        const colors = ["cyan", "black", "magenta", "yellow",];
+        const placedWords = [];
+        
+        function getNonOverlappingPosition() {
+            let x, y, overlapping;
+            const maxAttempts = 100;
+            let attempts = 0;
+            
+            do {
+                x = Math.random() * (window.innerWidth - 100);
+                y = Math.random() * (window.innerHeight - 50);
+                
+                overlapping = placedWords.some(word => {
+                    const dx = word.x - x;
+                    const dy = word.y - y;
+                    return Math.sqrt(dx * dx + dy * dy) < 100;
+                });
+                
+                attempts++;
+            } while (overlapping && attempts < maxAttempts);
+            
+            placedWords.push({ x, y });
+            return { x, y };
+        }
+        
+        function createWord(word) {
+            const span = document.createElement("span");
+            span.classList.add("word");
+            span.textContent = word;
+            document.body.appendChild(span);
+            
+            const position = getNonOverlappingPosition();
+            span.style.left = position.x + "px";
+            span.style.top = position.y + "px";
+            
+            animateWord(span);
+        }
+        
+        function animateWord(element) {
+            let x = parseFloat(element.style.left);
+            let y = parseFloat(element.style.top);
+            let speedX = (Math.random() - 0.5) * 2;
+            let speedY = (Math.random() - 0.5) * 2;
+            let slowed = false;
+            
+            function move() {
+                if (!slowed) {
+                    x += speedX;
+                    y += speedY;
+                }
+                
+                if (x <= 0 || x >= window.innerWidth - 100) speedX *= -1;
+                if (y <= 0 || y >= window.innerHeight - 50) speedY *= -1;
+                
+                element.style.left = x + "px";
+                element.style.top = y + "px";
+                requestAnimationFrame(move);
+            }
+            
+            element.addEventListener("mouseenter", () => {
+                slowed = true;
+                element.style.transform = "scale(1.2)";
+                element.style.color = colors[Math.floor(Math.random() * colors.length)];
+            });
+            
+            element.addEventListener("mouseleave", () => {
+                slowed = false;
+                element.style.transform = "scale(1)";
+                element.style.color = "black";
+            });
+            
+            move();
+        }
+        
+        words.forEach(createWord);
+  </script>
   <section id="hero" class="d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
       <h1>Jennifer McClinton</h1>
