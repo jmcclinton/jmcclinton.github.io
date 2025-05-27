@@ -9,27 +9,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-/** floating words*//
- body {
-   background-color: white;
-   color: black;
-   font-family: Arial, sans-serif;
-   overflow: hidden;
-   margin: -10;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
- }
-.word {
-   position: absolute;
-   font-size: 2rem;
-   font-weight: bold;
-   opacity: 0.8;
-   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-   white-space: nowrap;
-}
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
