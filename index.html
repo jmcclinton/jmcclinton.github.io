@@ -618,54 +618,59 @@ section {
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
-.cta {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg-1.jpg") fixed center center;
-  background-size: cover;
-  padding: 80px 0;
-}
-
-.cta h3 {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.cta p {
-  color: #fff;
-}
-
-.cta .cta-btn {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
+.rounded-codepen-button {
   display: inline-block;
-  padding: 8px 20px;
-  border-radius: 2px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid #fff;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
   color: #fff;
+  background-color: #34b7a7;
+  text-decoration: none;
+  border: none;
+  border-radius: 750px; /* pill shape */
+  transition: background 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.cta .cta-btn:hover {
-  background: #34b7a7;
-  border: 2px solid #34b7a7;
+.rounded-codepen-button:hover {
+  background: linear-gradient(135deg, #00ff90, #ff69b4, #ffffff, #ff4d4d, #3399ff, #a64dff);
+  background-size: 300% 300%;
+  animation: hoverRainbow 1s ease-in-out forwards;
+  transform: scale(1.05);
 }
 
-@media (max-width: 1024px) {
-  .cta {
-    background-attachment: scroll;
+@keyframes hoverRainbow {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: right center;
   }
 }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
-@media (min-width: 769px) {
-  .cta .cta-btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 /*--------------------------------------------------------------
 # About
@@ -1364,45 +1369,6 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
-/* button */
-.button {
-  border-radius: 4px;
-  background-color: #000000;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 </style>
 </head>
 
@@ -1443,7 +1409,9 @@ section {
     </div>
   </section><!-- End Hero -->
   <!--button-->
-  <p><a class="btn btn-danger btn-lg" role="button">Get Involved</a></p><br>
+  <a href="" class="rounded-codepen-button" target="_blank" rel="noopener noreferrer">
+ About me
+</a>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
