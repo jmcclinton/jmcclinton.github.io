@@ -1,0 +1,46 @@
+/* Ensure buttons in the jumbotron are large enough */
+.btn-lg {
+  font-size: 36px;
+}
+
+/* Homepage section styling */
+.homepage {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.homepage h2, .homepage h3 {
+  font-family: 'Arvo', courier, serif;
+  color: #bf8e31;
+  text-transform: uppercase;
+}
+
+.homepage h2 {
+  font-size: 30px;
+}
+
+.homepage h3 {
+  font-size: 26px;
+}
+
+.homepage p {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.homepage a {
+  color: #bf8e31;
+}
+
+.homepage a:hover {
+  color: #000000;
+  text-decoration: none;
+  opacity: .8;
+}
+
+.homepage hr {
+  border-top: 1px solid #bf8e31;
+  width: 150px;
+  margin-top: 15px;
+}
