@@ -8,27 +8,25 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/portfolio/favicon.ico" rel="icon">
+  <link href="../jmcclinton.github.io/assets/img/portfolio/favicon.ico" rel="icon">
   <!-- <link href="assets/img/portfolio/hero_image.jpg" rel="office"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!-- Bootstrap core CSS -->
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io/assets/css/aos.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io//assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/custom.css" rel="stylesheet">
-
-  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../jmcclinton.github.io/css/styles.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Kelly
@@ -66,7 +64,6 @@ body {
       transform-origin: 70% 70%;
       font-size: 2.5 rem; /* smaller emoji */
  }
-  
  @keyframes wave-animation {
       0% { transform: rotate(0deg); }
       10% { transform: rotate(14deg); }
@@ -617,9 +614,58 @@ section {
 }
 
 /*--------------------------------------------------------------
-# CTA
+# Cta
 --------------------------------------------------------------*/
-rounded-codepen-button {
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg-1.jpg") fixed center center;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta p {
+  color: #fff;
+}
+
+.cta .cta-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.cta .cta-btn:hover {
+  background: #34b7a7;
+  border: 2px solid #34b7a7;
+}
+
+@media (max-width: 1024px) {
+  .cta {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .cta .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+.rounded-codepen-button {/* button */
   display: inline-block;
   padding: 12px 28px;
   font-size: 16px;
@@ -672,6 +718,13 @@ rounded-codepen-button {
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+.move-down {/* moving the button down */
+  margin-top: 50px; /* adjust px value as needed (20px)*/
+}
+.nudge-down {
+  position: relative;
+  top: 40px; /* moves element 20px down */
 }
 /*--------------------------------------------------------------
 # About
@@ -1374,9 +1427,10 @@ rounded-codepen-button {
 </head>
 
 <body>
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
+    <div class="container-fluid d-flex justify-content-between align-items-right">
 
       <h1 class="logo me-auto me-lg-0"><a href="index.html">Jennifer <b>McClinton</b></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -1395,23 +1449,28 @@ rounded-codepen-button {
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-         <a href="https://dribbble.com/jmcclinton8"><i class="bi bi-dribbble"></i></a>
-        <a href="https://www.instagram.com/jmcclinton8/"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/jmcclinton8"><i class="bi bi-linkedin"></i></a>
+        <!--<a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jmcclinton8/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
+
     </div>
+
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <center><section id="hero" class="d-flex align-items-right">
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-      <center><h2>Hi there, <span class="wave">👋</span> I'm Jennifer and I'm your next Graphic Designer.</h2>
-      <a href="https://github.io/jmcclinton/about.html" class="btn-about">About Me</a></center>
+      <h2 style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); margin-top: 220px;">Hi there, <span class="wave">👋</span> I'm Jennifer. <br>Your next Graphic Designer.</h2><br />
+      <a href="" class="rounded-codepen-button" target="_blank" rel="noopener noreferrer">
+ About me
+      </a></center>
     </div>
-  </section><!-- End Hero -->
-  <!--button-->
-  <a href="" class="rounded-codepen-button" target="_blank" rel="noopener noreferrer">About me</a>
-  
+  </section>
+  <!-- End Hero -->
+ <!--/.nav-collapse -->
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -1440,7 +1499,7 @@ rounded-codepen-button {
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/noframework.waypoints.js"></script>
   <script src="assets/js/validate.js"></script>
-  
+
   <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script>
