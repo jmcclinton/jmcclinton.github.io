@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>< Code > | Responsive HTML Email Newsletter</title>
+<link rel="shortcut icon" href="./img/favicon.png">
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: #d8dbdb;
+	font-size: 18px;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 2%;
+	color: #565859;
+}
+.wrapper {
+	background: #f6faff;
+	box-shadow: 0 0 10px #666;
+}
+img {
+	max-width: 100%;
+}
+.logo {
+	padding: 1% 0;
+	text-align: center;
+}
+.logo img {
+	max-width: 220px;
+}
+h1, h2 {
+	letter-spacing: 1px;
+	padding-bottom: 15px;
+}
+p {
+	line-height: 28px;
+	padding-bottom: 25px;
+}
+.button {
+	background: #303840;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 800;
+	padding: 10px 14px;
+	border-radius: 8px;
+	letter-spacing: 2px;
+}
+.one-col {
+	padding: 20px 0 40px;
+	text-align: center;
+}
+.line {
+	clear: both;
+	height: 1px;
+	background-color: #303840;
+	margin: 15px auto 10px;
+	width: 98%;
+}
+.two-col {
+	margin: 10px 0 26px;
+	float: left;
+	width: 46%;
+	padding: 5% 2%;
+}
+.social {
+	width: 96%;
+	text-align: center;
+	list-style-type: none;
+	padding: 2%;
+	margin: 20px 0 5px;
+}
+.social li {
+	display: inline;
+}
+.social img {
+	max-width: 40px;
+}
+.contact {
+	text-align: center;
+	padding-bottom: 6%;
+}
+@media (max-width: 600px) {
+	body {
+		padding: 1%;
+	}
+	.two-col {
+		min-width: 96%;
+		margin: 0 0 15px!important;
+	}
+}
+</style>
+<style>
+    .read-more-state {
+      display: none;
+    }
+
+    .read-more-wrap {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .read-more-target {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    .read-more-state:checked ~ .read-more-target {
+      display: inline;
+      opacity: 1;
+    }
+
+    .read-more-trigger {
+      cursor: pointer;
+      color: #000000;
+      text-decoration: underline;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 5px;
+    }
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="logo">
+			<a href="#" target="_blank"><img src="./img/code_logo.png" alt="logo"></a>
+		</div>
+		<div class="banner"><!-- start read more toggle button and column -->
+			<a href="#" target="_blank"><img src="./img/code-banner.gif" alt="stem student"></a>
+		</div>
+		<div class="one-col">	
+			<div class="read-more-wrap"></div>
+<h2>🧠 1. Interactive Coding Platforms</h2>
+Learn by doing! These platforms teach through hands-on coding exercises:<br>
+* Scratch: Great for younger learners and visual logic.<br>
+<input type="checkbox" class="read-more-state" id="post-1" />
+<span class="read-more-target">
+&nbsp;* Code.org: STEM-focused and beginner-friendly.<br>
+* Khan Academy: Teaches coding alongside math, science, and physics.</span>
+<label for="post-1" class="read-more-trigger"></label>
+</div></div>
+		</div><!-- end of left column with read more toggle button -->
+		
+		<div class="line"></div>
+		<div class="two-col">
+			<div class="read-more-wrap">
+			<h2>Latest Blog Post</h2>
+			<h5><i>Always Test Emails in Gmail. Here's why.</i></h5><br>
+			<a href="#/" target="_blank"><img src="./img/photo1.png" alt="photo of computer"></a>
+			<p>When designing responsive emails, it's important to consider various email clients—Gmail for web being one of the most widely used.</p>
+			<div class="button-holder">
+				<a class="button" href="" target="_blank">Read More</a>
+			</div>
+		</div></div>
+
+		<div class="two-col">
+			<h2>Exclusive</h2>
+			<h5><i>Interview w/ HTML Email Developer Jane Merz</i></h5><br>
+			<a href="#" target="_blank"><img src="./img/photo2.png" alt="photo of Jane"></a>
+			<p>Jane tells us how he was able to become a successful HTML Email Developer during massive layoffs in the tech industry.</p>
+			<div class="button-holder">
+				<a class="button" href="" target="_blank">Read More</a>
+			</div>
+		</div>
+
+		<div class="line"></div>
+
+		<ul class="social">
+			<li><a href="#" target="_blank"><img src="./img/facebook.png" alt="facebook"></a></li>
+			<li><a href="#" target="_blank"><img src="./img/twitter.png" alt="twitter"></a></li>
+			<li><a href="#" target="_blank"><img src="./img/youtube.png" alt="youtube"></a></li>
+			<li><a href="#" target="_blank"><img src="./img/instagram.png" alt="instagram"></a></li>
+			<li><a href="#" target="_blank"><img src="./img/linkedin.png" alt="linkedin"></a></li>
+		</ul>
+		<p class="contact">
+			< Code > <br>
+			2 State Road, Trenton, NJ 08601<br>
+			1 (609) 544-5009<br>
+			<a href="" target="_blank">www.code.com</a> | <a href="" target="_blank">hello@code.com</a></p>
+	</div> <!--- End Wrapper -->
+</body>
+</html>
+
+
+<!-- Begin Social Share **you can remove this to center the template :) -->
+<style>
+	.btn:hover {
+		color: white;
+		opacity: .8;
+		transform: scale(1.02);
+	}
+</style>
+<!-- Button trigger modal -->
+ <!--
+<button type="button" class="btn btn-sm btn-danger" style="position: absolute; right: 7px; bottom: 7px;transition: transform .3s ease;" data-toggle="modal" data-target="#socialModal">
+  Subscribe!
+</button> -->
+<!-- Modal -->
+<!-- <div class="modal fade" id="socialModal" style="font-family: 'Poppins', sans-serif;">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content" style="background-color: rgba(255, 255, 255, .9)!important;border: 0;">
+      <div class="modal-header" style="display: none;">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> -->
+			<!-- <div class="modal-body">
+				<div class="container-fluid text-center">
+					<div class="row justify-content-center px-0">
+						<div class="col-12">
+							<h2 class="pt-2 pb-4">Subscribe & turn on notifications! <i class="fas fa-bell"></i></h2>
+						</div>
+						<div class="col-lg-5 my-2"> -->
+							<!-- YOUTUBE CHANNEL -->
+							<!-- <a class="btn btn-lg" href="https://www.youtube.com/channel/UCZWoe3ezD_dZTZgQnDyBgFQ/?sub_confirmation=1" target="_blank" style="background-color: red;color: white;transition: transform .3s ease;"><i class="fab fa-youtube"></i> Subscribe
+							</a>
+						</div>
+						<div class="col-12">
+							<h6 class="pt-4 pb-0"><a href="https://responsivehtmlemail.com/html-email-course/" target="_blank">www.responsivehtmlemail.com</a></h6>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+	$(this).delay(2000).queue(function() { /*-- CHANGE DELAY TIME --*/
+		$("#socialModal").modal('show');
+	});
+</script> -->

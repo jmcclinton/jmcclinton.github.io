@@ -4,298 +4,708 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About me | Jennifer McClinton | Graphic Designer | HTML Email Developer</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-  <title>About Me</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link href="./assets/img/faviconjm.png" rel="icon">
-  <!-- <link href="assets/img/portfolio/hero_image.jpg" rel="office"> -->
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Kelly
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
   * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
-<style>
+  <style>
+    /* picture circle shape */
     .circle-image {
-      width: 350px;           /* Set your desired size */
+      width: 350px;
+      /* Set your desired size */
       height: 350px;
-      border-radius: 70%;     /* This makes the image round */
-      object-fit: cover;      /* Ensures the image covers the circle area */
-      border: 3px solid #fff; /* Optional: border around the image */
+      border-radius: 70%;
+      /* This makes the image round */
+      object-fit: cover;
+      /* Ensures the image covers the circle area */
+      border: 3px solid #fff;
+      /* Optional: border around the image */
     }
+  </style>
+  <style>
+    /*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #444444;
+    }
+
+    a {
+      color: #34b7a7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #51cdbe;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif;
+    }
+
+    #main {
+      margin-top: 50px;
+    }
+
+    @media (max-width: 992px) {
+      #main {
+        margin-top: 30px;
+      }
+    }
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+    .back-to-top {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      right: 15px;
+      bottom: 15px;
+      z-index: 996;
+      background: #34b7a7;
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      transition: all 0.4s;
+    }
+
+    .back-to-top i {
+      font-size: 24px;
+      color: #fff;
+      line-height: 0;
+    }
+
+    .back-to-top:hover {
+      background: #49cbbb;
+      color: #fff;
+    }
+
+    .back-to-top.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+    #header {
+      background: #e9e8e6;
+      box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+      z-index: 997;
+      padding: 15px 0;
+    }
+
+    #header .logo {
+      font-size: 32px;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    #header .logo a {
+      color: #222222;
+    }
+
+    #header .logo img {
+      max-height: 40px;
+    }
+
+    @media (max-width: 992px) {
+      #header .logo {
+        font-size: 28px;
+      }
+    }
+
+     /*--------------------------------------------------------------
+# Header Social Links
+--------------------------------------------------------------*/
+    .header-social-links {
+      padding-right: 15px;
+    }
+
+    .header-social-links a {
+      color: #6f6f6f;
+      padding-left: 6px;
+      display: inline-block;
+      line-height: 0px;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    .header-social-links a:hover {
+      color: #34b7a7;
+    }
+
+ /**
+* Mobile Navigation 
+*/
+    .mobile-nav-toggle {
+      color: #222222;
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      line-height: 0;
+      transition: 0.5s;
+    }
+
+    .mobile-nav-toggle.bi-x {
+      color: #fff;
+    }
+
+    @media (max-width: 991px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .navbar ul {
+        display: none;
+      }
+    }
+
+    .navbar-mobile {
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(9, 9, 9, 0.9);
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .navbar-mobile .mobile-nav-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .navbar-mobile ul {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      padding: 10px 0;
+      border-radius: 10px;
+      background-color: #fff;
+      overflow-y: auto;
+      transition: 0.3s;
+    }
+
+    .navbar-mobile a,
+    .navbar-mobile a:focus {
+      font-size: 15px;
+      padding-right: 15px;
+      color: #222222;
+    }
+
+    .navbar-mobile a:hover,
+    .navbar-mobile .active,
+    .navbar-mobile li:hover>a {
+      color: #34b7a7;
+    }
+
+    .navbar-mobile .getstarted,
+    .navbar-mobile .getstarted:focus {
+      margin: 15px;
+    }
+
+    .navbar-mobile .dropdown ul {
+      position: static;
+      display: none;
+      margin: 10px 20px;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+    .navbar-mobile .dropdown ul li {
+      min-width: 200px;
+    }
+
+    .navbar-mobile .dropdown ul a {
+      padding: 10px 20px;
+    }
+
+    .navbar-mobile .dropdown ul a i {
+      font-size: 12px;
+    }
+
+    .navbar-mobile .dropdown ul a:hover,
+    .navbar-mobile .dropdown ul .active:hover,
+    .navbar-mobile .dropdown ul li:hover>a {
+      color: #34b7a7;
+    }
+
+    .navbar-mobile .dropdown>.dropdown-active {
+      display: block;
+    }
+    
+    /*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+    .about .content h3 {
+      font-weight: 700;
+      font-size: 26px;
+      color: #555555;
+    }
+
+    .about .content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about .content ul li {
+      padding-bottom: 10px;
+    }
+
+    .about .content ul i {
+      font-size: 20px;
+      padding-right: 2px;
+      color: #34b7a7;
+    }
+
+    .about .content p:last-child {
+      margin-bottom: 0;
+    }
+
+     /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+    #footer {
+      background: #e9e8e6;
+      padding: 30px 0;
+      color: #222222;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    #footer .credits {
+      padding-top: 5px;
+      font-size: 13px;
+    }
+
+    #footer .credits a {
+      color: #34b7a7;
+    }
+
 </style>
 </head>
-<body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
+<body class="about-page">
 
-      <h1 class="logo me-auto me-lg-0"><a href="./index.html">Jenniferr <b>McClinton</b></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h2 class="sitename">JENNIFER <b>MCCLINTON</b></h2>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a class="active" href="./about.html">About</a></li>
-          <li><a href="./resume.html">Resume</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="./portfolio.html">Portfolio</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
+            <!-- <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
       <div class="header-social-links">
-        <!--<a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/jmcclinton8/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <!--<a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>-->
+        <a href="https://dribbble.com/jmcclinton8"><i class="bi bi-dribbble"></i></a>
+        <a href="https://www.instagram.com/jmcclinton8/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jmcclinton8"><i class="bi bi-linkedin"></i></a>
       </div>
-
     </div>
+  </header>
 
-  </header><!-- End Header -->
+  <main class="main">
 
-  <main id="main">
+    <!-- About Section -->
+    <section id="about" class="about section">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>About Me</h2>
-          <h4>Hello! I am Jennifer and I want to be your next Graphic Designer. For over 15 years, I have been creating and delivering digital and marketing materials for various clients and industries, ranging from small businesses and visual artists to educational and cultural organizations. As a freelance graphic designer, I enjoy the flexibility and variety of working on different projects and challenges, while maintaining high standards of quality and customer service.<br>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About me</h2>
+      </div><!-- End Section Title -->
 
-          I have a strong background in Communication Design, Adobe Creative Cloud, Figma and QuarkXpress, which I acquired through my formal education and professional experience. I also keep updating my skills and knowledge by taking online courses and certificates in UI/UX design, Figma, WordPress, Google Analytics, and other relevant technologies and software. My goal is to provide innovative and user-friendly solutions that meet the needs and expectations of my clients and their audiences.</h4></br>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="./images/aboutMe.jpg" alt="Profile Photo" class="circle-image" />
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Graphic & UI/UX Designer</h3>
-            <h3 class="fst-italic">
-              Specializing in HTML Email Development and Front-End Development
-            </h3>
-            <h3 class="row">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+      <div class="col-lg-4">
+        <img src="./assets/img/aboutMe.jpg" alt="Profile Photo" class="circle-image">
+      </div>
+          <div class="col-lg-8 content">
+            <h2>Specializing in Graphic Design/HTML Email Development</h2>
+            <p class="fst-italic py-3">
+              Hello! I am Jennifer and I want to be your next designer. For over 15 years, I have been creating and delivering digital and marketing materials for various clients and industries, ranging from small businesses and visual artists to educational and cultural organizations. As a freelance graphic designer, I enjoy the flexibility and variety of working on different projects and challenges, while maintaining high standards of quality and customer service. <br>
+
+<br>I have a strong background in Communication Design, Adobe Creative Cloud, Figma and QuarkXpress, which I acquired through my formal education and professional experience. I also keep updating my skills and knowledge by taking online courses and certificates in UI/UX design, Figma, WordPress, Google Analytics, and other relevant technologies and software. My goal is to provide innovative and user-friendly solutions that meet the needs and expectations of my clients and their audiences.<br />
+            </p>
+            <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-rounded-right"></i> <strong>Degree: </strong>Bachelor of Arts</li>
-                  <li><i class="bi bi-rounded-right"></i> <strong>Major: </strong> Communication Design</li>
-                  <li><i class="bi bi-rounded-right"></i> <strong>College: </strong> New Jersey City University</li>
-                  <li><i class="bi bi-rounded-right"></i> <strong>Hobbies: </strong> DYIs, Arts & Crafts & Horror Movies</li>
-                </ul></div></h3></div></div></div></section><!-- End About Section -->
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <h3>These are skills I acquired in school and on my own. </h3>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Role:</strong><span> HTML Email Developer with Graphic Design experience</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span> Bachelor of Arts</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Major:</strong> <span> Communication Design @ New Jersey City University</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong> <span> DYIs, Arts & Crafts & Watching Horror Movies</span></li>
+                </ul>
+              </div>
+              <!-- <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Major:</strong> <span>Communication Design</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Arts</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>jmcclinton8@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div> -->
+            <!-- <p class="py-3">
+              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
+            </p> -->
+          </div>
         </div>
-        <div class="row skills-content">
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>These are skills I acquired in school and on my own.</p>
+        <img src="assets/img/skills.png" alt="skills">
+      </div><!-- End Section Title -->
+
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row skills-content skills-animation">
           <div class="col-lg-6">
             <div class="progress">
-              <span class="skill">HTML/CSS <i class="val">90%</i></span>
+              <span class="skill"><span>HTML</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div>
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">30%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="30"></div>
-              </div>
-            </div>
-          </div>
-            <div class="progress">
-              <span class="skill">WordPress/CMS <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80"></div>
-              </div>
-            </div>
+            </div> --><!-- End Skills Item -->
 
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">90%</i></span>
+            <!-- <div class="progress">
+              <span class="skill"><span>CSS</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="90"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div>
-          </div>
+            </div> --> <!-- End Skills Item -->
+
+            <!-- <div class="progress">
+              <span class="skill"><span>JavaScript</span> <i class="val">40%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div> --> <!-- End Skills Item -->
+          <!-- </div> 
+
+          <div class="col-lg-6"> -->
+
+            <!-- <div class="progress">
+              <span class="skill"><span>PHP</span> <i class="val">40%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              </div> 
+            </div> --> <!-- End Skills Item -->
+
+            <!-- <div class="progress">
+              <span class="skill"><span>WordPress/CMS</span> <i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div> --> <!-- End Skills Item -->
+
+            <!-- <div class="progress">
+              <span class="skill"><span>Photoshop, Illustrator & InDesign</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>--> <!-- End Skills Item -->
+          <!-- </div>
         </div>
       </div>
-    </section><!-- End Skills Section -->
+    </section> --> <!-- /Skills Section -->
 
-    <!-- ======= Facts Section ======= -->
-    <!--<section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
 
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Stats</h2>
+        <p>Clients I served</p>
+      </div><!-- End Section Title -->
 
-        <div class="row counters">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
-          </div>
+        <div class="row gy-4">
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="121" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Worker</p>
-          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="430" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div> <!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Freelancer (me!)</p>
+            </div>
+          </div><!-- End Stats Item -->
 
         </div>
 
       </div>
-    </section>--><!-- End Facts Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <!--<section id="testimonials" class="testimonials">
-      <div class="container" data-aos="fade-up">-->
+    </section><!-- /Stats Section -->
 
-        <!--<div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="testimonials section"> -->
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div> --><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <!--<div class="swiper-wrapper">
 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div>-->
-            <!-- End testimonial item -->
+            </div> --><!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div>-->
-            <!-- End testimonial item -->
+            </div>--><!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div>--><!-- End testimonial item -->
+            </div> --><!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div>--><!-- End testimonial item -->
+            </div> --><!-- End testimonial item -->
 
-            <!--<div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
-            </div>--><!-- End testimonial item -->
-          <!--</div>
+            </div> --><!-- End testimonial item -->
+
+          <!-- </div>
           <div class="swiper-pagination"></div>
         </div>
+
       </div>
-    </section>--><!-- End Testimonials Section -->
-  <!--</main>--><!-- End #main -->
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-      <div class="copyright">
-        &copy; 2025-2026 |<strong><span> Jennifer McClinton </span></strong>| All Rights Reserved.
+
+    </section>--> 
+
+  </main><!-- Testimonials Section -->
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© Copyright<span> 2025 - 2026 </span> <strong class="px-1 sitename">| Jennifer McClinton |</strong> <span>All Rights Reserved.<br></span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <!--<a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>-->
+        <a href="https://dribbble.com/jmcclinton8"><i class="bi bi-dribbble"></i></a>
+        <a href="https://www.instagram.com/jmcclinton8/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jmcclinton8"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">Jennifer McClinton</a> -->
       </div>
     </div>
-  </footer><!-- End  Footer -->
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Template Main JS File -->
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
