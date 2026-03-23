@@ -397,15 +397,6 @@
                <!-- END OF YOUR ITEMS TITLE -->
 
                <!-- START OF YOUR ITEMS DETAILS -->
-
-               {%- for item in items -%}
-      <li>
-         <a href="{{items_page[forloop.index]}}">
-            <img src="{{items_images[forloop.index]}}">
-         {{item}}
-         </a>
-      </li>
-   
                <tr>
                   <td style="padding-top: 10px;" align="center">
                      <table class="responsive-table" role="presentation" width="540" cellspacing="0" cellpadding="0" border="0" align="center">
@@ -454,7 +445,7 @@
                      </tbody></table>
                   </td>
                </tr>
-               {% endfor %}
+                {% endfor %}
                <!-- END OF YOUR ITEMS DETAILS -->
 
                <!-- START OF BORDER -->
