@@ -1,0 +1,93 @@
+#services-section{
+  padding: 80px 15px;
+}
+#services-section .title{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#services-section .title .circle{
+  background: #eef9ff;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 23px;
+}
+#services-section .title h1{
+  position: relative;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #16171b;
+  z-index: 1;
+  letter-spacing: 4px;
+}
+
+#services-section .services-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+#services-section .services-container .box{
+  background: rgba(255,255,255, 0);
+  padding: 40px;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+#services-section .services-container .box:hover{
+  background: rgba(255,255,255, 1);
+  -webkit-box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
+  -moz-box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
+  box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
+}
+
+#services-section .services-container .box .fas{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#services-section .services-container .box h5{
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+#services-section .services-container .box p{
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #b3b3b3;
+}
+
+#services-section .services-container .box.blue{
+  border-bottom: 2px solid #52b8ff;
+}
+#services-section .services-container .box.red{
+  border-bottom: 2px solid #ff5253;
+}
+#services-section .services-container .box.yellow{
+  border-bottom: 2px solid #ffc853;
+}
+/* Tablets */
+@media only screen and (max-width: 960px){
+  #services-section .services-container{
+    grid-template-columns: 100%;
+  }
+  #services-section .services-container .box{
+    background: rgba(255,255,255, 1);
+    -webkit-box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
+    box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
+  }
+}
+/* Phones */
+@media only screen and (max-width: 767px){
+
+}

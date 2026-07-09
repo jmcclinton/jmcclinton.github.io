@@ -1,0 +1,52 @@
+/*
+* Template Name : Salience - Responsive Personal Portfolio Page
+* Version : 1.0.0
+* Created by : Themesdesign
+* File : Template default color
+*/
+
+.bg-custom,
+.under-line,
+.dot,
+.btn-custom,
+.timeline-page .timeline-item .date-label-left,
+.timeline-page .timeline-item .date-label-left::after,
+.timeline-page .timeline-item .duration-right,
+.timeline-page .timeline-item .duration-right::after,
+.container-filter li a.active,
+.timeline-page::after {
+    background-color:#ff546c;
+}
+
+.btn-custom {
+    border: 1px solid #ff546c !important;
+}
+
+.navbar-custom .navbar-nav li.active a,
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:active {
+    color: #ff546c !important;
+}
+
+.nav-sticky.navbar-custom .navbar-nav li.active a,
+.nav-sticky.navbar-custom .navbar-nav li a:hover,
+.nav-sticky.navbar-custom .navbar-nav li a:active {
+    color: #ff546c !important;
+}
+
+.custom-form .form-control:focus {
+    border: 1px solid #ff546c !important;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom {
+    background-color: #e84f64;
+    border-color: #e84f64;
+}

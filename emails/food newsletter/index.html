@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<!--Language-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <!--Internal Css: CSS reset-->
+    <style>
+        /*Client spefic style*/
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        /* Reset styles*/
+        img {
+            border: 0;
+            height: auto;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* iOS blue links*/
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /*samsung mail blue links*/
+        #MessageViewBody a {
+            color: inherit;
+            text-decoration: none;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+
+        /*body*/
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: gray;
+        }
+
+        /* What it does: Hover styles for buttons */
+        .primary {
+            background: #448ef6;
+        }
+
+        .bg_white {
+            background: #ffffff;
+        }
+
+        .bg_light {
+            background: #fafafa;
+        }
+
+        .bg_black {/* black bckgrd email bottom */
+            background: #363535;
+        }
+
+        .bg_dark {
+            background: rgba(0, 0, 0, .8);
+        }
+
+        .email-section {
+            padding: 2.5em;
+        }
+
+        /*VIDEO*/
+        .icon {
+            text-align: center;
+        }
+
+        .img {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .img .icon {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: -25px;
+        }
+
+        .img .icon a {
+            display: block;
+            width: 60px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -25px;
+        }
+
+
+        /*BUTTON*/
+        .btn {
+            padding: 5px 15px;
+            display: inline-block;
+        }
+        .btn.btn-primary:hover {
+            background: #e79a0a; 
+            text-decoration: none;
+        }
+
+        .btn.btn-primary {
+            border-radius: 30px;
+            background: #53987c;/* main button */
+            color: #ffffff;
+        }
+
+        .btn.btn-white {
+            border-radius: 30px;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .btn.btn-white-outline {
+            border-radius: 30px;
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            margin-top: 0;
+            font-weight: 400;
+        }
+
+        h3, .sub-title {
+            font-family: 'Raleway', sans-serif;
+            color: gray;
+            margin-top: 0;
+            font-weight: 400;
+        }
+
+        .main-title {
+            font-family: 'Raleway', sans-serif;
+            color: rgb(255, 255, 255);
+            margin-top: 0;
+            font-weight: 400;
+            text-shadow: 2px 2px 5px gray;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.8;
+            color: rgba(0, 0, 0, .4);
+        }
+
+        a {
+            color: #448ef6;
+        }
+
+        table {}
+
+        /*Background*/
+        .bg_light {
+            background: #fafafa;
+        }
+
+        .email-section {
+            padding: 2.5em;
+        }
+
+        /*LOGO*/
+
+        .logo {
+            margin: 0;
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin-bottom: 0;
+        }
+
+        .logo a {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Raleway', sans-serif;
+            display: inline-block;
+            border: 2px solid #fff;
+            line-height: 1.3;
+            padding: 10px 15px 4px 15px;
+            margin: 0;
+        }
+
+        .logo h1 a span {
+            line-height: 1;
+        }
+
+        .navigation {
+            padding: 0;
+        }
+
+        .navigation li {
+            list-style: none;
+            display: inline-block;
+            ;
+            margin-left: 5px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .navigation li a {
+            color: rgba(0, 0, 0, .4);
+        }
+
+        /*HERO*/
+        .hero {
+            position: relative;
+            z-index: 0;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            background: #000000;
+            z-index: -1;
+            opacity: .3;
+        }
+
+        .hero .text {
+            color: rgba(255, 255, 255, .9);
+        }
+
+        .hero .text h2 {
+            color: #fff;
+            font-size: 40px;
+            margin-bottom: 0;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .hero .text h2 span {
+            font-weight: 600;
+            color: #448ef6;
+        }
+
+
+        /*HEADING SECTION*/
+        .heading-section {}
+
+        .heading-section h2 {
+            color: #000000;
+            font-size: 28px;
+            margin-top: 0;
+            line-height: 1.4;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .heading-section .subheading {
+            margin-bottom: 20px !important;
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(0, 0, 0, .4);
+            position: relative;
+        }
+
+        .heading-section .subheading::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #448ef6;
+            margin: 0 auto;
+        }
+
+        .heading-section-white {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .heading-section-white h2 {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1;
+            padding-bottom: 0;
+        }
+
+        .heading-section-white h2 {
+            color: #ffffff;
+        }
+
+        .heading-section-white .subheading {
+            margin-bottom: 0;
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, .4);
+        }
+
+
+        /*BLOG*/
+        .blog-entry {
+            border: 1px solid red;
+            padding-bottom: 30px !important;
+        }
+
+        .text-blog .meta {
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        /*FOOTER*/
+
+        .footer {
+            color: rgba(255, 255, 255, .5);
+
+        }
+
+        .footer .heading {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .footer ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer ul li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 1);
+        }
+        /*hover*/
+        .btn .btn-primary:hover {
+            background: #fd6350;
+        }
+        /*Responsive design*/
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u~div .email-container {
+                min-width: 320px !important;
+            }
+        }
+
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u~div .email-container {
+                min-width: 375px !important;
+            }
+        }
+
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u~div .email-container {
+                min-width: 414px !important;
+            }
+        }
+        /* CSS reset ends*/
+        /*Mobile design*/
+        /*Media queery*/
+        @media screen and (max-width: 500px;) {
+        /*fluid table*/
+        table {
+            max-width: 100% !important;
+        }
+        /*responsive img*/
+        img {
+            max-width: 100% !important;
+        }
+
+        }
+
+        
+    </style>
+    <title>Food Circles' Monthly Newsletter</title>
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #dfd0d0;">
+    <center style="width: 100%; background-color: #d5d1d1;">
+        <div
+            style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+        </div>
+        <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <!-- BEGIN BODY -->
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+                style="margin: auto;">
+                <tr>
+                    <!--This is background image-->
+                    <td valign="middle" class="hero bg_white"
+                        style="background-image: url('images/top-banner.png'); background-size: cover; height: 400px;">
+                        <div class="overlay"></div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="text" style="padding: 0 4em; text-align: center;">
+                                        <!--This is logo-->
+                                        <!-- <img src="https://github.com/rosyhnguyen/imageudemy/blob/e01769d22be196cb926eb9e950d7824cb5432db7/Asset%201.png?raw=true"
+                                            alt="logo" style="max-width: 20%; display: block; margin: 20px auto;"> -->
+                                        <!--This is heading and paragraphs-->
+                                        <br><br><h2>Nutrition Myth Busters</h2><br>
+                                        <h3 class="main-title"><i>Your quick dose of food facts — without the fluff.</i></h3>
+                                        
+                                        <!--Button 2 with Internal CSS-->
+                                        <p><a href="https://blog.nasm.org/nutrition-myths-to-ignore" class="btn btn-primary">Read
+                                                more</a></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!--Layout: 2 column:-->
+                <!--Biggest row-->
+                <tr>
+                    <td class="bg_white email-section">
+                        <!--Header-->
+
+                        <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                            <h2>Best Articles in this Month</h2>
+                        </div>
+                        <!--Biggest table-->
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <!--The first row-->
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <!--Role-->
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <td valign="middle" width="50%">
+                                            <!--Display block-->
+                                            <img src="emails/food newsletter/myths.gif"
+                                                alt="Make your own Website Portfolio"
+                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display:block; ">
+                                        </td>
+                                        <td valign="middle" width="50%">
+                                            <!--Text align: left-->
+                                            <div class="text-blog" style="text-align: left; padding-left:25px;">
+                                                <p class="meta"><span>Posted: Aug 12, 2025</span>
+                                                </p>
+                                                <h3 class="sub-title">Myth: Carbs make you fat</h3>
+                                                <p>
+Truth: Whole carbs like oats, fruits, veggies, and legumes fuel your body and support health. It’s refined carbs and excess sugar that are the real culprits.
+                                                </p>
+                                                <p><a href="https://blog.nasm.org/nutrition-myths-to-ignore" class="btn btn-primary">Read more</a></p>
+                                            </div>
+                                        </td>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!--The second row-->
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <!--Role presentation-->
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <td valign="middle" width="50%">
+                                            <img src="emails/food newsletter/myth2.gif"
+                                                alt="Make an Online Store"
+                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+
+                                        </td>
+                                        <td valign="middle" width="50%">
+                                            <div class="text-blog" style="text-align: left; padding-left:25px;">
+                                                <p class="meta"><span>Posted: Aug 8, 2025</span>
+                                                </p>
+                                                <h3 class="sub-title">Myth: Eating fat makes you gain weight</h3>
+                                                <p>Truth: Healthy fats from avocado, nuts, and olive oil help with brain power, hormones, and nutrient absorption. Balance is key — fat isn’t the enemy.
+                                                </p>
+                                                <p><a href="https://blog.nasm.org/nutrition-myths-to-ignore" class="btn btn-primary">Read more</a></p>
+                                            </div>
+                                        </td>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!--The third row-->
+                            <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <td valign="middle" width="50%">
+                                            <img src="emails/food newsletter/website_imgs/myth3.gif"
+                                                alt=""
+                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+
+                                        </td>
+                                        <td valign="middle" width="50%">
+                                            <div class="text-blog" style="text-align: left; padding-left:25px;">
+                                                <p class="meta"><span>Posted: Aug 8, 2025</span>
+                                                </p>
+                                                <h3 class="sub-title">Juice cleanses detox your body</h3>
+                                                <p>Truth: Your liver and kidneys already have you covered. A diet full of whole foods, fiber, and water beats any “detox” drink.
+                                                </p>
+                                                <p><a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/carbohydrates/art-20045705" class="btn btn-primary">Read more</a></p>
+                                            </div>
+                                        </td>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!--The forth row-->
+                            <!-- <tr>
+                                <td style="padding-bottom: 30px;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <td valign="middle" width="50%">
+                                            <img src="images/taskApp.png"
+                                                alt=""
+                                                style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+
+                                        </td>
+                                        <td valign="middle" width="50%">
+                                            <div class="text-blog" style="text-align: left; padding-left:25px;">
+                                                <p class="meta"><span>Posted: Apr 8, 2025</span>
+                                                </p>
+                                                <h3 class="sub-title">Task Management Tool:</h3>
+                                                <p>Build a task or project management application that allows users to create, update, and delete tasks, set deadlines, and track progress. This highlights your understanding of CRUD operations and user interface design.
+                                                </p>
+                                                <p><a href="#" class="btn btn-primary">Read more</a></p>
+                                            </div>
+                                        </td>
+                                    </table>
+                                </td>
+                            </tr> -->
+                        </table>
+                    </td>
+                </tr><!-- end: tr -->
+                <tr>
+                    <td class="bg_light email-section" style="text-align:center;">
+                        <table>
+                            <tr>
+                                <td class="img">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img src="emails/food newsletter/website_imgs/takeaway.png" width="600" height=""
+                                                    alt="Apple Design" border="0"
+                                                    style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"
+                                                    class="g-img">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top: 20px;">
+                                    <p> 💡 Takeaway: Focus on whole, balanced meals — your body knows what to do.<br>
+                                        📩 Want more quick tips? Subscribe for next week’s “Healthy Hacks You’ll Actually Use.”
+                                    </p>
+                                    <br><a href="https://nadiafelsch.com/foodandbodyfreedom/nutrition-myth-busting-part-2/" target="_blank">Nadia F.</a> 
+                                    <br><a href="https://www.idahopress.com/community/health/nutrition-myth-busters-holiday-weight-gain-is-a-reality/article_c6095d50-a290-11ee-8b12-a375f8b223ed.html" target="_blank">Idaho Press</a> 
+                                    <br><a href="https://www.mercola.com/ebook/superfoods-guide-exp1.htm?cid_medium=paid&cid_source=googleads&cid=superfoods_20250716&cid_term=superfoods_search&gad_source=5&gad_campaignid=22793688477&gclid=EAIaIQobChMIzb6FpKmGjwMVTnFHAR1p1xREEAAYASAAEgLT1_D_BwE&adobe_mc_sdid=SDID%3D7E055FDCB40C9597-71B2D19DAB972C2A%7CMCORGID%3D2082401053DB12AC0A490D4C%40AdobeOrg%7CTS%3D1755039542&adobe_mc_ref=https%3A%2F%2Fwww.startpage.com%2F" target="_blank">Dr. Mercola</a> 
+                                    <br><a href="https://blog.nasm.org/nutrition-myths-to-ignore" target="_blank">NASM</a> 
+                                    <p>Yay! You made it to the end!!</p>
+                                    <img width="600" height="auto" style="max-width: 100%;" src="emails/food newsletter/website_imgs/healthy-eating.png">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr><!-- end: tr -->
+            </table>
+            <!--Footer-->
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+                style="margin: auto;">
+                <tr>
+                    <td valign="middle" class="bg_black footer email-section">
+                        <table>
+                            <tr>
+                                <!--Column #1-->
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-right: 10px;">
+                                                <h3 class="heading">About</h3>
+                                                <p> Hi there, We’ve all heard them — those catchy “facts” about food that everyone seems to repeat… but aren’t actually true. Let’s set the record straight.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <!--Column #2-->
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
+                                                <h3 class="heading">Contact</h3> 
+                                                <ul>
+                                                    <li><span class="text">569 Turner Avenue, Toms River, New Jersey,
+                                                            USA</span></li>
+                                                    <li><a href="mailto:jmcclinton8@gmail.com">Send Email</a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <!--Menu-->
+                                <td valign="top" width="33.333%" style="padding-top: 20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-left: 10px;">
+                                                <h3 class="heading">Useful Links</h3>
+                                                <ul>
+                                                    <li><a href="#">Home</a></li>
+                                                    <li><a href="#">About</a></li>
+                                                    <li><a href="#">Blog</a></li>
+                                                    <li><a href="#">Contact</a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- The last line footer -->
+                <tr>
+                    <td valign="middle" class="bg_black footer email-section">
+                        <table>
+                            <tr>
+                                <td valign="top" width="33.333%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: left; padding-right: 10px;">
+                                                <p>&copy; 2026 - Food Circle's Monthly Newsletter on top myths about food. All Rights Reserved.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="33.333%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: right; padding-left: 5px; padding-right: 5px;">
+                                                <p><a href="#" style="color: rgba(255,255,255,.4);">Unsubscribe</a></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+</body>
+</html>

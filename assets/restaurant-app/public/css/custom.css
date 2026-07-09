@@ -1,0 +1,127 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 0;  /* Offset for fixed navbar */
+  padding-bottom: 0;
+}
+
+/* Reset body margin and padding */
+body {
+  margin: 0px;/* 0 to forever */
+  padding: 0;
+}
+
+ul.nav, .jumbotron h1 {
+	font-family: 'Arvo', courier, serif;
+}
+
+#get-involved {
+  background-color: #721414;
+}
+
+#whoweare {
+  background-color: #721414;
+}
+
+a {
+  color: rgb(42, 134, 21);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: orange;
+}
+
+a:active {
+  color: green;
+}
+
+/* Jumbotron styling */
+.jumbotron {
+  text-align: center;
+  background-image: url("../img/fc_website_bkgrd.png"); /* Your background image */
+  background-size: cover;  /* Ensures the image covers the section */
+  background-position: center;  /* Centers the background image */
+  background-attachment: fixed;
+  color: #fff; /* heading */
+  height: 100vh; /* Takes full viewport height */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content */
+  padding: 0 15px; /* Adds padding on the left and right */
+  margin-top: 50px; /* Ensures the jumbotron starts below the fixed navbar */
+}
+
+/* Jumbotron heading and text */
+.jumbotron h1 {
+  margin-top: 0px;
+  margin-bottom: 60px;
+  font-size: 3em; /* Adjust for better visibility */
+}
+
+.jumbotron p {
+  margin-bottom: 30px;
+  font-weight: 100;
+  padding: 0 50px;
+  color: #721414;
+}
+
+/* Ensure buttons in the jumbotron are large enough */
+.btn-lg {
+  font-size: 25px;
+  color: #fff;
+}
+
+/* Homepage section styling */
+.homepage {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.homepage h2, .homepage h3 {
+  font-family: 'Arvo', courier, serif;
+  text-transform: uppercase;
+}
+
+.homepage h2 wrap {
+  font-size: 30px;
+  color: #fff;
+}
+
+.homepage h2 {
+  font-size: 30px;
+  color: #721414;
+}
+
+.homepage h3 {
+  font-size: 26px;
+  color: #721414;
+}
+
+.homepage p {
+  font-size: 21px;
+  font-weight: 300;
+  color: #000;
+}
+
+.homepage a {
+  color: #721414;
+}
+
+.homepage a:hover {
+  color: #fff;
+  text-decoration: none;
+  opacity: .8;
+}
+
+.homepage hr {
+  border-top: 1px solid #721414;
+  width: 150px;
+  margin-top: 15px;
+}

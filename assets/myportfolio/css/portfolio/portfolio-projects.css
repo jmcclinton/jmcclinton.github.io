@@ -1,0 +1,145 @@
+#portfolio-projects{
+  padding: 100px 15px;
+}
+#portfolio-projects .project-image{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+#portfolio-projects .project-image .img{
+  width: 100%;
+  height: 450px;
+  background-size: cover !important;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+  /* background-attachment: fixed !important; */
+}
+#portfolio-projects h1{
+  font-size: 4rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+#portfolio-projects .info .buttons{
+  padding: 20px 0;
+}
+#portfolio-projects .info .buttons a{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: white;
+  background: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .3s ease-in-out;
+}
+#portfolio-projects .info .buttons .fas{
+  color: #ff5253;
+  margin-right: 10px;
+}
+#portfolio-projects .info .buttons a:hover{
+  background: #ff5253;
+}
+#portfolio-projects .info .buttons a:hover .fas{
+  color: #000;
+}
+#portfolio-projects p{
+  display: inline-block;
+  border-radius: 3px;
+  color: #929294;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-decoration: none;
+  margin-bottom: 1.8rem;
+  text-transform: capitalize;
+}
+
+#portfolio-projects .technologies{
+  padding: 100px 0;
+}
+#portfolio-projects h3{
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+#portfolio-projects .technologies .icons{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+
+}
+#portfolio-projects .technologies .icons img{
+  filter: grayscale(100%);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+#portfolio-projects .technologies .icons img:hover{
+
+  filter: grayscale(0);
+}
+#portfolio-projects .technologies .icons .icon img{
+  width: 100%;
+  max-width: 60px;
+}
+#portfolio-projects .video{
+  text-align: center;
+}
+#portfolio-projects .blog .content-area{
+  display: flex;
+}
+#portfolio-projects .blog .content-area .inside{
+  width: 70%;
+  display: inline-block;
+  padding: 15px;
+}
+#portfolio-projects .blog .content-area .right-widgets{
+  width: 30%;
+  display: inline-block;
+}
+#portfolio-projects .blog .content-area .right-widgets .widget-box{
+  padding: 15px;
+  margin-bottom: 2rem;
+}
+#portfolio-projects .blog .content-area .right-widgets .widget-box h3{
+  margin: 0 0 2rem;
+  text-align: center;
+}
+#portfolio-projects .blog .content-area .right-widgets .widget-box #wp-calendar{
+  width: 100%;
+}
+#portfolio-projects .blog .content-area .right-widgets .widget-box #wp-calendar caption{
+  width: 100%;
+  margin: .8rem 0;
+}
+
+@media only screen and (max-width: 960px){
+  #portfolio-projects h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+  #portfolio-projects p{
+    font-size: 1rem;
+  }
+  #portfolio-projects h3{
+    text-align: center;
+  }
+  #portfolio-projects .video iframe{
+    width: 100% !important;
+  }
+
+}
+/* Phones */
+@media only screen and (max-width: 767px){
+  #portfolio-projects .info .buttons{
+    text-align: center;
+  }
+  #portfolio-projects .info .buttons a{
+    margin-bottom: 10px;
+  }
+  #portfolio-projects .technologies .icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
